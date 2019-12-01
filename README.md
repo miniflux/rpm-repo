@@ -1,8 +1,8 @@
 Miniflux RPM Repository
 =======================
 
-Configuration
--------------
+Repository Configuration
+-------------------------
 
 Create the file `/etc/yum.repos.d/miniflux.repo`:
 
@@ -20,10 +20,9 @@ Then install the package:
 yum install -y miniflux
 ```
 
-Create Repo
------------
+Update Repository Index
+-----------------------
 
 ```bash
 docker run --rm -v $PWD:/repo centos:7 bash -c "yum install -y createrepo && createrepo /repo/x86_64/"
 ```
-
